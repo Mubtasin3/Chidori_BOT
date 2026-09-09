@@ -1,10 +1,18 @@
 import os
 import sys
+
+# Force root directory into sys.path
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+
 import asyncio
 import threading
 import discord
 from discord.ext import commands
 from flask import Flask
+
+# Local imports (must come AFTER setting sys.path)
 from config import TOKEN
 from database.database import init_db
 from views.tickets import TicketControlView, TicketSelectView
