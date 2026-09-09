@@ -1,0 +1,5 @@
+discord.py
+aiosqlite
+yt-dlp
+python-dotenv
+Flask
