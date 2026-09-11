@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: chidori-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: BOT_OWNER_ID
+        sync: false
+      - key: PREFIX
+        value: "!"
