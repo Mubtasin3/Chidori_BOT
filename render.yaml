@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: gang-fund-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: BOT_OWNER_ID
+        sync: false
+      - key: PREFIX
+        value: "!"
